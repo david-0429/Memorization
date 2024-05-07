@@ -5,7 +5,7 @@ import torch
 
 
 # Gradient store
-def grad_store(images, targets, model):
+def grad_store(images, targets, model, loss_function):
     model.train()
     grad_dict = defaultdict(list)
 
