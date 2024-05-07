@@ -1,7 +1,7 @@
 import torch
 import torchvision
 
-from data_utils import transformed
+from data.data_utils import transformed
 
 
 #CIFAR10 mean, std
