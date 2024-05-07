@@ -16,7 +16,7 @@ from data.CIFAR10 import CIFAR10_loader
 from data.CIFAR100 import CIFAR100_loader
 
 from model import get_network
-from data_utils import make_noisy_label
+from data.data_utils import make_noisy_label
 from utils import calc_mean_grad, grad_store
 
 def parse_option():
