@@ -1,9 +1,12 @@
 import torch
 import torchvision
 
-from utils import transformed
-from conf import CIFAR10_TRAIN_MEAN, CIFAR10_TRAIN_STD
+from data_utils import transformed
 
+
+#CIFAR10 mean, std
+CIFAR10_TRAIN_MEAN = (0.4914, 0.4822, 0.4465)
+CIFAR10_TRAIN_STD =  (0.247, 0.243, 0.261)
 
 data_path = '/content/data/CIFAR10'
 
