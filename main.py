@@ -22,7 +22,6 @@ from utils import calc_mean_grad, grad_store
 def parse_option():
   parser = argparse.ArgumentParser()
   parser.add_argument('--data', default='CIFAR10', type=str, choices=['CIFAR10', 'CIFAR100'])
-  parser.add_argument('--name', type=str)
   parser.add_argument('--model', type=str, default='resnet18', help='net type')
   parser.add_argument('--pretrain', default=False, help='use pretrained model or not')
   
@@ -30,9 +29,7 @@ def parse_option():
   parser.add_argument('--val_interval', default=1, type=int, help='validation interval epochs')
   parser.add_argument('--batch_size', default=64, type=int, help='mini-batch size (default: 256)')
   parser.add_argument('--lr', default=0.001, type=float, help='initial learning rate')
-
   parser.add_argument('--DA', default='none', type=str, choices=['none', 'flip_crop', 'flip_crop_AA', 'flip_crop_RA'])
-  parser.add_argument('--gpu', action='store_true', default=False, help='use gpu or not')
   
   # Important!
   parser.add_argument('--grad_sample_num', default=1024, type=int, help='number of samples to store gradient')
